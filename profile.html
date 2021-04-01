@@ -74,6 +74,21 @@
     <script src="./assets/js/login.js">
         console.log(mailid);
     </script>
+    <script>
+        fetch('https://tpgitminiblog.herokuapp.com/register')
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                for(var i = 0;i < data.length;i++){
+                    var check = data[i].firstname + " "+data[i].lastname;
+                    if (name == check) {
+                        document.getElementById('').innerHTML = data[i].batch;
+                    }
+                }
+            })
+
+    </script>
 
     <div class="se-pre-con"></div>
 
